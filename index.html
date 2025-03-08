@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Cadastro de Produtos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- TypeScript -->
+    <script src="js/main.js"></script>
+    <script src="js/produto.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header bg-danger text-white">
+                <h2 class="text-center">Sistema de Cálculo de Impostos</h2>
+            </div>
+            <div class="card-body bg-light">
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="card mb-3">
+                            <div class="card-header bg-dark text-white">
+                                <h4>Informações do Produto 1</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <h5>Produto 1: <span id="nomeProduto" class="text-success"></span></h5>
+                                </div>
+                                <div class="mb-3">
+                                    <h5>Preço: <span id="precoProduto" class="text-primary"></span></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-dark text-white">
+                                <h4>Editar Produto</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <label for="NomeProduto" class="form-label">Nome do Produto:</label>
+                                    <input type="text" class="form-control" id="NomeProdutoUser" placeholder="Digite o nome do produto">
+                                    
+                                    <label for="PrecoProdutoUser" class="form-label mt-1">Preço do Produto:</label>
+                                    <input type="number" class="form-control" id="PrecoProdutoUser" min="10" placeholder="Digite o preço do produto">
+                                </div>
+                                <div class="mb-3 mt-3">
+                                    <button id="atualizarBotao" class="btn btn-outline-primary w-100">Atualizar o Produto</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-header bg-dark text-white">
+                        <h4>Cálculo do Imposto</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row align-items-end">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="ImpostoUser" class="form-label">Percentual do Imposto (%):</label>
+                                    <input type="number" class="form-control" id="ImpostoUser" min="0" step="1" placeholder="Ex: 10">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <button id="calcularBotao" class="btn btn-outline-success w-100">Calcular Preço Final</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header bg-dark text-white">
+                        <h4>Resultado</h4>
+                    </div>
+                    <div class="card-body">
+                        <h3 id="resultado" class="text-center">Aguardando cálculo...</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
